@@ -1,0 +1,9 @@
+pandas
+numpy
+yfinance
+pytz
+TA-Lib
+scikit-learn
+tensorflow
+pyyaml
+flask

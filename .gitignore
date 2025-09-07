@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Data, logs, outputs
+data/
+logs/
+models/
+outputs/
+scalers/
+
+# Templates, IDE, system files
+.vscode/
+*.idea/
+*.DS_Store

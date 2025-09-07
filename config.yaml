@@ -1,0 +1,87 @@
+data:
+  end_date: '2025-09-06'
+  interval: 1d
+  n_days_to_predict: 5
+  raw_save_path: data/raw.csv
+  start_date: '2024-03-10'
+  ticker: GOOGL
+  tickers: []
+  z_thresh: 3.0
+feature_engineering:
+  indicators:
+    atr:
+      fn: atr
+      params:
+        period: 14
+    bollinger_bands:
+      fn: bollinger_bands
+      params:
+        period: 20
+        std_mult: 2.0
+    cci:
+      fn: cci
+      params:
+        period: 14
+    ema:
+      fn: ema
+      params:
+        period: 14
+    macd:
+      fn: macd
+      params:
+        fast: 12
+        signal: 9
+        slow: 26
+    rsi:
+      fn: rsi
+      params:
+        period: 14
+    sma:
+      fn: sma
+      params:
+        period: 14
+    williams_r:
+      fn: williams_r
+      params:
+        period: 14
+  n_workers: 4
+  parallel: false
+model:
+  batch_size: 32
+  dropout_rate: 0.2
+  epochs: 50
+  log_dir: logs
+  loss: mean_squared_error
+  lstm_units:
+  - 64
+  - 32
+  model_dir: models
+  model_name: lstm_model.h5
+  optimizer: adam
+  patience: 5
+  type: lstm
+  use_tensorboard: false
+preprocessor:
+  feature_cols:
+  - Open
+  - High
+  - Low
+  - Close
+  - Volume
+  - SMA_14
+  - EMA_14
+  - RSI_14
+  - MACD
+  - MACD_signal
+  - BB_upper_20_2.0
+  - BB_lower_20_2.0
+  - ATR_14
+  - CCI_14
+  - WILLIAMS_R_14
+  scaler_path: models/scaler.pkl
+  scaler_type: minmax
+  target_col: Close
+  test_size: 0.2
+  window_size: 60
+risk:
+  risk_free_rate: 0.02
