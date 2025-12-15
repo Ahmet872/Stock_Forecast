@@ -214,3 +214,14 @@ Quantopian, "Zipline: A Pythonic Algorithmic Trading Library," GitHub.
 FIRMAI, "Financial Machine Learning and Feature Engineering for Finance," GitHub.
 
 [11] Gu, S., Kelly, B., & Xiu, D. "Empirical Asset Pricing via Machine Learning," The Review of Financial Studies, 2020.
+
+
+## Project Revamp / Updates
+
+This repository is undergoing a restructuring and improvement phase. The main goals of this update are:
+- Refactor existing code for readability and maintainability.
+- Improve modularity and reusability of components.
+- Add missing documentation and usage examples.
+- Fix existing issues and update dependencies.
+
+Stay tuned for the updated version. Contributions and feedback are welcome.
